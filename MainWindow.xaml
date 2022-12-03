@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculatorWPF"
         mc:Ignorable="d"
-        ResizeMode="NoResize"
+        ResizeMode="CanMinimize"
         Title="Calculator" Height="600" Width="550">
     <Grid Background="White">
         <TextBlock x:Name="PreviousValue" HorizontalAlignment="Center" Margin="0,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="36" TextAlignment="Right" Width="281"/>
