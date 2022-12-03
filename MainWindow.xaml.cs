@@ -103,6 +103,7 @@ namespace CalculatorWPF
                 var val1 = double.Parse(PreviousValue.Text);
                 var val2 = double.Parse(NumberInput.Text);
                 double result = val1 - val2;
+                result = Math.Round(result, 2);
                 PreviousValue.Text = result.ToString();
             }
             NumberInput.Text = "0";
@@ -126,7 +127,9 @@ namespace CalculatorWPF
 
         private void bClickComma(object sender, RoutedEventArgs e)
         {
-
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += ",";
         }
 
         private void bClickPlus(object sender, RoutedEventArgs e)
@@ -138,6 +141,7 @@ namespace CalculatorWPF
                 var val1 = double.Parse(PreviousValue.Text);
                 var val2 = double.Parse(NumberInput.Text);
                 double result = val1 + val2;
+                result = Math.Round(result, 2);
                 PreviousValue.Text = result.ToString();
             }
             NumberInput.Text = "0";
