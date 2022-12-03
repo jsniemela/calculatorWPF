@@ -25,37 +25,106 @@ namespace CalculatorWPF
             InitializeComponent();
         }
 
+        private void BClick0(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text != "0")
+                NumberInput.Text += "0";
+        }
+
+        private void BClick1(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += "1";
+        }
+
+        private void BClick2(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += "2";
+        }
+
+        private void BClick3(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += "3";
+        }
+
+        private void BClick4(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += "4";
+        }
+
+        private void BClick5(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += "5";
+        }
+
+        private void BClick6(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += "6";
+        }
+
+        private void BClick7(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += "7";
+        }
+
+        private void BClick8(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += "8";
+        }
+
+        private void BClick9(object sender, RoutedEventArgs e)
+        {
+            if (NumberInput.Text == "0")
+                NumberInput.Text = "";
+            NumberInput.Text += "9";
+        }
+
+        private void BClickMinus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bClickResult(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bClickClear(object sender, RoutedEventArgs e)
+        {
+            NumberInput.Text = "0";
+        }
+
+        private void bClickComma(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bClickPlus(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BClickBack(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void button_Copy_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Copy1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Copy2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Copy5_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Copy12_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Copy13_Click(object sender, RoutedEventArgs e)
         {
 
         }

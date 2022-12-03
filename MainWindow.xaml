@@ -8,24 +8,24 @@
         Title="Calculator" Height="600" Width="550">
     <Grid Background="White">
         <TextBlock x:Name="Calculator" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Calculator" VerticalAlignment="Top" FontSize="36"/>
-        <TextBox x:Name="NumberInput" HorizontalAlignment="Center" Margin="0,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" TextChanged="textBox_TextChanged" FontSize="24" TextAlignment="Center" Background="White"/>
+        <TextBox x:Name="NumberInput" HorizontalAlignment="Center" Margin="0,63,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="281" TextChanged="textBox_TextChanged" FontSize="24" TextAlignment="Right" Background="White"/>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="button" Content="1" HorizontalAlignment="Left" Margin="0,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100"/>
-            <Button x:Name="button_Copy" Content="2" HorizontalAlignment="Left" Margin="105,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy_Click"/>
-            <Button x:Name="button_Copy1" Content="3" HorizontalAlignment="Left" Margin="210,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy1_Click"/>
-            <Button x:Name="button_Copy2" Content="4" HorizontalAlignment="Left" Margin="0,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy2_Click"/>
-            <Button x:Name="button_Copy3" Content="5" HorizontalAlignment="Left" Margin="105,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy_Click"/>
-            <Button x:Name="button_Copy4" Content="6" HorizontalAlignment="Left" Margin="210,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy1_Click"/>
-            <Button x:Name="button_Copy5" Content="7" HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy5_Click"/>
-            <Button x:Name="button_Copy6" Content="8" HorizontalAlignment="Left" Margin="105,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy_Click"/>
-            <Button x:Name="button_Copy7" Content="9" HorizontalAlignment="Left" Margin="210,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy1_Click"/>
-            <Button x:Name="button_Copy8" Content="-" HorizontalAlignment="Left" Margin="315,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy1_Click"/>
-            <Button x:Name="button_Copy10" Content="&lt;-" HorizontalAlignment="Left" Margin="315,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy1_Click"/>
-            <Button x:Name="button_Copy11" Content="0" HorizontalAlignment="Left" Margin="0,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100"/>
-            <Button x:Name="button_Copy12" Content="," HorizontalAlignment="Left" Margin="106,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy12_Click"/>
-            <Button x:Name="button_Copy13" Content="clear" HorizontalAlignment="Left" Margin="210,399,0,0" VerticalAlignment="Top" FontSize="36" Width="100" Height="100" Click="button_Copy13_Click"/>
-            <Button x:Name="button_Copy14" Content="=" HorizontalAlignment="Left" Margin="315,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100"/>
-            <Button x:Name="button_Copy9" Content="+" HorizontalAlignment="Left" Margin="315,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="button_Copy1_Click"/>
+            <Button x:Name="button" Content="1" HorizontalAlignment="Left" Margin="0,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick1"/>
+            <Button x:Name="button_Copy" Content="2" HorizontalAlignment="Left" Margin="105,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick2"/>
+            <Button x:Name="button_Copy1" Content="3" HorizontalAlignment="Left" Margin="210,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick3"/>
+            <Button x:Name="button_Copy2" Content="4" HorizontalAlignment="Left" Margin="0,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick4"/>
+            <Button x:Name="button_Copy3" Content="5" HorizontalAlignment="Left" Margin="105,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick5"/>
+            <Button x:Name="button_Copy4" Content="6" HorizontalAlignment="Left" Margin="210,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick6"/>
+            <Button x:Name="button_Copy5" Content="7" HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick7"/>
+            <Button x:Name="button_Copy6" Content="8" HorizontalAlignment="Left" Margin="105,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick8"/>
+            <Button x:Name="button_Copy7" Content="9" HorizontalAlignment="Left" Margin="210,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick9"/>
+            <Button x:Name="button_Copy8" Content="-" HorizontalAlignment="Left" Margin="315,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClickMinus"/>
+            <Button x:Name="button_Copy10" Content="&lt;-" HorizontalAlignment="Left" Margin="315,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClickBack"/>
+            <Button x:Name="button_Copy11" Content="0" HorizontalAlignment="Left" Margin="0,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick0"/>
+            <Button x:Name="button_Copy12" Content="," HorizontalAlignment="Left" Margin="106,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="bClickComma"/>
+            <Button x:Name="button_Copy13" Content="clear" HorizontalAlignment="Left" Margin="210,399,0,0" VerticalAlignment="Top" FontSize="36" Width="100" Height="100" Click="bClickClear"/>
+            <Button x:Name="button_Copy14" Content="=" HorizontalAlignment="Left" Margin="315,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="bClickResult"/>
+            <Button x:Name="button_Copy9" Content="+" HorizontalAlignment="Left" Margin="315,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="bClickPlus"/>
         </Grid>
     </Grid>
 </Window>
