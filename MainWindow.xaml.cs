@@ -132,8 +132,7 @@ namespace CalculatorWPF
 
         private void bClickComma(object sender, RoutedEventArgs e)
         {
-            if (NumberInput.Text == "0")
-                NumberInput.Text = "";
+            if (!NumberInput.Text.Contains(","))
             NumberInput.Text += ",";
         }
 
@@ -167,11 +166,6 @@ namespace CalculatorWPF
             }
         }
 
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Calculate(double val1, double val2, String op)
         {
             double result;
@@ -185,7 +179,7 @@ namespace CalculatorWPF
             }
             else
                 return;
-            result = Math.Round(result, 2);
+            result = Math.Round(result, 6);
             PreviousValue.Text = result.ToString();
         }
     }
