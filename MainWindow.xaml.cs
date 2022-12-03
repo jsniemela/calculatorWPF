@@ -121,7 +121,14 @@ namespace CalculatorWPF
 
         private void BClickBack(object sender, RoutedEventArgs e)
         {
-
+            if (NumberInput.Text.Length > 1) 
+            { 
+                NumberInput.Text = NumberInput.Text.Remove(NumberInput.Text.Length - 1);
+            } 
+            else// if (NumberInput.Text != "0")
+            {
+                NumberInput.Text = "0";
+            }
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
