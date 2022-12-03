@@ -97,32 +97,37 @@ namespace CalculatorWPF
         private void BClickMinus(object sender, RoutedEventArgs e)
         {
             if (PreviousValue.Text == "")
+            {
                 PreviousValue.Text = NumberInput.Text;
+                Operator.Text = "-";
+            }
             else
             {
                 var val1 = double.Parse(PreviousValue.Text);
                 var val2 = double.Parse(NumberInput.Text);
-                double result = val1 - val2;
-                result = Math.Round(result, 2);
-                PreviousValue.Text = result.ToString();
+                string op = Operator.Text;
+                Calculate(val1, val2, op);
+                Operator.Text = "-";
             }
             NumberInput.Text = "0";
         }
 
         private void bClickResult(object sender, RoutedEventArgs e)
         {
-            /*
-            var val1 = double.Parse(PreviousValue.Text);
-            var val2 = double.Parse(NumberInput.Text);
-            double result = val1 + val2;
-            PreviousValue.Text = result.ToString();
-            */
+            if (PreviousValue.Text != "")
+            {
+                var val1 = double.Parse(PreviousValue.Text);
+                var val2 = double.Parse(NumberInput.Text);
+                string op = Operator.Text;
+                Calculate(val1, val2, op);
+            }
         }
 
         private void bClickClear(object sender, RoutedEventArgs e)
         {
             NumberInput.Text = "0";
             PreviousValue.Text = "";
+            Operator.Text = "";
         }
 
         private void bClickComma(object sender, RoutedEventArgs e)
@@ -135,14 +140,17 @@ namespace CalculatorWPF
         private void bClickPlus(object sender, RoutedEventArgs e)
         {
             if (PreviousValue.Text == "")
+            {
                 PreviousValue.Text = NumberInput.Text;
+                Operator.Text = "+";
+            }
             else
             {
                 var val1 = double.Parse(PreviousValue.Text);
                 var val2 = double.Parse(NumberInput.Text);
-                double result = val1 + val2;
-                result = Math.Round(result, 2);
-                PreviousValue.Text = result.ToString();
+                string op = Operator.Text;
+                Calculate(val1, val2, op);
+                Operator.Text = "+";
             }
             NumberInput.Text = "0";
         }
@@ -162,6 +170,23 @@ namespace CalculatorWPF
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Calculate(double val1, double val2, String op)
+        {
+            double result;
+            if (op == "+")
+            {
+                result = val1 + val2;
+            }
+            else if (op == "-")
+            {
+                result = val1 - val2;
+            }
+            else
+                return;
+            result = Math.Round(result, 2);
+            PreviousValue.Text = result.ToString();
         }
     }
 }
