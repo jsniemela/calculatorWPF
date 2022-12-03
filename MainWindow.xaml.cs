@@ -101,12 +101,18 @@ namespace CalculatorWPF
 
         private void bClickResult(object sender, RoutedEventArgs e)
         {
-
+            /*
+            var val1 = double.Parse(PreviousValue.Text);
+            var val2 = double.Parse(NumberInput.Text);
+            double result = val1 + val2;
+            PreviousValue.Text = result.ToString();
+            */
         }
 
         private void bClickClear(object sender, RoutedEventArgs e)
         {
             NumberInput.Text = "0";
+            PreviousValue.Text = "";
         }
 
         private void bClickComma(object sender, RoutedEventArgs e)
@@ -116,7 +122,16 @@ namespace CalculatorWPF
 
         private void bClickPlus(object sender, RoutedEventArgs e)
         {
-
+            if (PreviousValue.Text == "")
+                PreviousValue.Text = NumberInput.Text;// + " + ";
+            else
+            {
+                var val1 = double.Parse(PreviousValue.Text);
+                var val2 = double.Parse(NumberInput.Text);
+                double result = val1 + val2;
+                PreviousValue.Text = result.ToString();
+            }
+            NumberInput.Text = "0";
         }
 
         private void BClickBack(object sender, RoutedEventArgs e)
