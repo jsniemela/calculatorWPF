@@ -103,40 +103,34 @@ namespace CalculatorWPF
             }
             else
             {
-                var val1 = double.Parse(PreviousValue.Text);
-                var val2 = double.Parse(NumberInput.Text);
-                string op = Operator.Text;
-                Calculate(val1, val2, op);
+                Calculate();
                 Operator.Text = "-";
             }
             NumberInput.Text = "0";
         }
 
-        private void bClickResult(object sender, RoutedEventArgs e)
+        private void BClickResult(object sender, RoutedEventArgs e)
         {
             if (PreviousValue.Text != "")
             {
-                var val1 = double.Parse(PreviousValue.Text);
-                var val2 = double.Parse(NumberInput.Text);
-                string op = Operator.Text;
-                Calculate(val1, val2, op);
+                Calculate();
             }
         }
 
-        private void bClickClear(object sender, RoutedEventArgs e)
+        private void BClickClear(object sender, RoutedEventArgs e)
         {
             NumberInput.Text = "0";
             PreviousValue.Text = "";
             Operator.Text = "";
         }
 
-        private void bClickComma(object sender, RoutedEventArgs e)
+        private void BClickComma(object sender, RoutedEventArgs e)
         {
             if (!NumberInput.Text.Contains(","))
             NumberInput.Text += ",";
         }
 
-        private void bClickPlus(object sender, RoutedEventArgs e)
+        private void BClickPlus(object sender, RoutedEventArgs e)
         {
             if (PreviousValue.Text == "")
             {
@@ -145,10 +139,7 @@ namespace CalculatorWPF
             }
             else
             {
-                var val1 = double.Parse(PreviousValue.Text);
-                var val2 = double.Parse(NumberInput.Text);
-                string op = Operator.Text;
-                Calculate(val1, val2, op);
+                Calculate();
                 Operator.Text = "+";
             }
             NumberInput.Text = "0";
@@ -160,14 +151,17 @@ namespace CalculatorWPF
             { 
                 NumberInput.Text = NumberInput.Text.Remove(NumberInput.Text.Length - 1);
             } 
-            else// if (NumberInput.Text != "0")
+            else
             {
                 NumberInput.Text = "0";
             }
         }
 
-        private void Calculate(double val1, double val2, String op)
+        private void Calculate()
         {
+            var val1 = double.Parse(PreviousValue.Text);
+            var val2 = double.Parse(NumberInput.Text);
+            string op = Operator.Text;
             double result;
             if (op == "+")
             {
@@ -177,10 +171,48 @@ namespace CalculatorWPF
             {
                 result = val1 - val2;
             }
+            else if (op == "*")
+            {
+                result = val1 * val2;
+            }
+            else if (op == "/" && val2 != 0)
+            {
+                result = val1 / val2;
+            }
             else
                 return;
             result = Math.Round(result, 6);
             PreviousValue.Text = result.ToString();
+        }
+
+        private void BClickMultiply(object sender, RoutedEventArgs e)
+        {
+            if (PreviousValue.Text == "")
+            {
+                PreviousValue.Text = NumberInput.Text;
+                Operator.Text = "*";
+            }
+            else
+            {
+                Calculate();
+                Operator.Text = "*";
+            }
+            NumberInput.Text = "0";
+        }
+
+        private void BClickDivide(object sender, RoutedEventArgs e)
+        {
+            if (PreviousValue.Text == "")
+            {
+                PreviousValue.Text = NumberInput.Text;
+                Operator.Text = "/";
+            }
+            else
+            {
+                Calculate();
+                Operator.Text = "/";
+            }
+            NumberInput.Text = "0";
         }
     }
 }

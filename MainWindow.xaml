@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:CalculatorWPF"
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
-        Title="Calculator" Height="600" Width="550">
+        Title="Calculator" Height="600" Width="600">
     <Grid Background="White">
         <TextBlock x:Name="PreviousValue" HorizontalAlignment="Center" Margin="0,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="36" TextAlignment="Right" Width="281"/>
-        <TextBlock x:Name="Operator" HorizontalAlignment="Left" Margin="420,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
+        <TextBlock x:Name="Operator" HorizontalAlignment="Left" Margin="440,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
         <TextBlock x:Name="NumberInput" HorizontalAlignment="Center" Margin="0,63,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="281" FontSize="24" TextAlignment="Right" Background="White"/>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="button" Content="1" HorizontalAlignment="Left" Margin="0,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick1"/>
@@ -22,12 +22,14 @@
             <Button x:Name="button_Copy6" Content="8" HorizontalAlignment="Left" Margin="105,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick8"/>
             <Button x:Name="button_Copy7" Content="9" HorizontalAlignment="Left" Margin="210,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick9"/>
             <Button x:Name="button_Copy8" Content="-" HorizontalAlignment="Left" Margin="315,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClickMinus"/>
-            <Button x:Name="button_Copy10" Content="&lt;-" HorizontalAlignment="Left" Margin="315,84,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClickBack"/>
+            <Button x:Name="button_Copy10" Content="&lt;-" HorizontalAlignment="Left" Margin="315,84,0,0" VerticalAlignment="Top" FontSize="72" Width="205" Height="100" Click="BClickBack"/>
             <Button x:Name="button_Copy11" Content="0" HorizontalAlignment="Left" Margin="0,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClick0"/>
-            <Button x:Name="button_Copy12" Content="," HorizontalAlignment="Left" Margin="106,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="bClickComma"/>
-            <Button x:Name="button_Copy13" Content="clear" HorizontalAlignment="Left" Margin="210,399,0,0" VerticalAlignment="Top" FontSize="36" Width="100" Height="100" Click="bClickClear"/>
-            <Button x:Name="button_Copy14" Content="=" HorizontalAlignment="Left" Margin="315,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="bClickResult"/>
-            <Button x:Name="button_Copy9" Content="+" HorizontalAlignment="Left" Margin="315,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="bClickPlus"/>
+            <Button x:Name="button_Copy12" Content="," HorizontalAlignment="Left" Margin="106,399,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClickComma"/>
+            <Button x:Name="button_Copy13" Content="clear" HorizontalAlignment="Left" Margin="210,399,0,0" VerticalAlignment="Top" FontSize="36" Width="100" Height="100" Click="BClickClear"/>
+            <Button x:Name="button_Copy14" Content="=" HorizontalAlignment="Left" Margin="315,399,0,0" VerticalAlignment="Top" FontSize="72" Width="205" Height="100" Click="BClickResult"/>
+            <Button x:Name="button_Copy9" Content="+" HorizontalAlignment="Left" Margin="315,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClickPlus"/>
+            <Button x:Name="button_Copy15" Content="/" HorizontalAlignment="Left" Margin="420,294,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClickDivide"/>
+            <Button x:Name="button_Copy16" Content="*" HorizontalAlignment="Left" Margin="420,189,0,0" VerticalAlignment="Top" FontSize="72" Width="100" Height="100" Click="BClickMultiply"/>
         </Grid>
     </Grid>
 </Window>
